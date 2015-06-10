@@ -56,10 +56,10 @@ ADD ./djproject      /var/projects/djproject
 
 # installing python prereqs...
 RUN cd /var/projects/djproject && pip install -r requirements.txt
-#RUN cd /var/projects/djproject && \
-#    ./manage.py syncdb --noinput && \
+RUN cd /var/projects/djproject && \
+    ./manage.py syncdb --noinput && \
 #    ./manage.py loaddata backend/admin_account_fixture.json && \
-#    ./manage.py collectstatic --noinput
+    ./manage.py collectstatic --noinput
 
 
 # run 
